@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9C016C84-5CD4-49E2-985C-F51E5862F9AE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GUI2</RootNamespace>
+    <AssemblyName>GUI2</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework, Version=3.7.1.189, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\MonoGame\v3.0\Assemblies\DesktopGL\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Accents\BackgroundAccent.cs" />
+    <Compile Include="Accents\BorderAccent.cs" />
+    <Compile Include="Accents\IAccent.cs" />
+    <Compile Include="Content\Spritesheet.cs" />
+    <Compile Include="Content\SpritesheetManager.cs" />
+    <Compile Include="Controls\GPieMenu.cs" />
+    <Compile Include="Controls\GRadioButton.cs" />
+    <Compile Include="Controls\GButton.cs" />
+    <Compile Include="Controls\GContainer.cs" />
+    <Compile Include="Controls\GLabel.cs" />
+    <Compile Include="Controls\GLayer.cs" />
+    <Compile Include="Controls\GScrollableContainer.cs" />
+    <Compile Include="Controls\GTextBox.cs" />
+    <Compile Include="Controls\GTexture.cs" />
+    <Compile Include="Controls\GWindow.cs" />
+    <Compile Include="Extensions\GTextureExtensions.cs" />
+    <Compile Include="GUIComponent.cs" />
+    <Compile Include="GUIProvider.cs" />
+    <Compile Include="Layout\WrapLayout.cs" />
+    <Compile Include="Layout\ILayoutItem.cs" />
+    <Compile Include="Layout\ILayoutManager.cs" />
+    <Compile Include="Layout\LayoutEventArgs.cs" />
+    <Compile Include="Layout\StackLayout.cs" />
+    <Compile Include="Prefabs\FrameCounter.cs" />
+    <Compile Include="Prefabs\SelectionPanel.cs" />
+    <Compile Include="Primitives\Thickness.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Text\InterfaceFont.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\GlacierEngine\Glacier.csproj">
+      <Project>{7b8d067b-e48e-4b24-a3eb-fae3f4715279}</Project>
+      <Name>Glacier</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
